@@ -29,3 +29,5 @@ git clone https://github.com/BREN0sx/LocalStorage-Login.git
 ### Página de Dashboard
 
 > O usuário poderá visualizar algumas informações relevantes, como data de registro, nome do usuário logado e um botão de logout
+
+.
