@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/4845b625d1.js" crossorigin="anonymous"></script>
+    
+    <style>body {display: block!important}</style>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+
+          <ul class="lists">
+            <p id="username"></p>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Dashboard</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link active">
+                <i class="bx bx-cog icon"></i>
+                <span class="link">Conta</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="#" class="nav-link" id="logout-btn">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Sair</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="container dashboard">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="box-container">
+              <h1>Configurações de Conta</h1>
+                    <div class="accountInfo">
+                        <div class="form-group mb-3" style="width: 63%;">
+                            <label for="usuario">Usuário</label>
+                            <input type="text" class="form-control" id="username-dash" disabled>
+                        </div>
+                        <div class="form-group mb-3" style="width: 35%;">
+                            <label for="usuario">Criada em</label>
+                            <input type="text" class="form-control" id="created-dash" disabled>
+                        </div>
+                    </div>
+                <form id="accountInfo">
+                    <div class="form-group mb-3">
+                        <label for="oldPass">Senha antiga</label>
+                        <div class="pass-input">
+                          <input type="password" class="form-control passwordInput" id="oldPass">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="newPass">Nova senha</label>
+                        <div class="pass-input">
+                          <input type="password" class="form-control passwordInput" id="newPass" minlength="6">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="confirmNewPass">Confirmar nova senha</label>
+                        <div class="pass-input">
+                          <input type="password" class="form-control passwordInput" id="confirmNewPass" minlength="6">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="passwordUpdate">Alterar senha</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast-container"></div>
+    
+    <script> const activeUser = localStorage.getItem('activeUser'); </script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
