@@ -22,10 +22,16 @@ git clone https://github.com/BREN0sx/LocalStorage-Login.git
 
 > O usuário poderá inserir suas informações de login e senha, e realizar a validação dos dados
 
+![login](https://user-images.githubusercontent.com/105817781/236448134-39c0c7dd-e308-47c2-8c54-acf4e0415a24.gif)
+
 ### Página de Cadastro
 
 > O usuário poderá inserir suas informações de registro e senha, e realizar a validação dos dados
 
+![register](https://user-images.githubusercontent.com/105817781/236448189-2d172c3c-3c93-47cf-a28a-96fef262bbea.gif)
+
 ### Página de Dashboard
 
 > O usuário poderá visualizar algumas informações relevantes, como data de registro, nome do usuário logado e um botão de logout
+
+![dash](https://user-images.githubusercontent.com/105817781/236448222-d5386d13-59a6-4e24-8a1f-04801383ef89.gif)
