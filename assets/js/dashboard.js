@@ -51,7 +51,7 @@ accountInfo.addEventListener('submit', function (event) {
   const senhaSalva = JSON.parse(localStorage.getItem(usuario)).senha;
   if (!oldPass || !newPass || !confirmNewPass) {
     return showToast('error', 'Campos incompletos');
-  } else if (oldPass !== senhaSalva) {
+  } else if (CryptoJS.SHA256(oldPass).toString() !== senhaSalva) {
     return showToast('error', 'Senha incorreta');
   } else if (newPass !== confirmNewPass) {
     return showToast('error', 'As senhas não coincidem');
@@ -60,7 +60,7 @@ accountInfo.addEventListener('submit', function (event) {
   }
 
   const novoCadastro = JSON.parse(localStorage.getItem(usuario));
-  novoCadastro.senha = newPass;
+  novoCadastro.senha = CryptoJS.SHA256(newPass).toString();
   localStorage.setItem(usuario, JSON.stringify(novoCadastro));
 
   showToast('success', 'Sua senha foi alterada');
