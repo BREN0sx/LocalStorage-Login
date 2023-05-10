@@ -25,7 +25,7 @@ loginForm.addEventListener('submit', function (event) {
     
     if (!usuario || !senha) {
         return showToast('error', 'Campos incompletos');
-    } else if ((cadastro === null) || (senha !== cadastro.senha)) {
+    } else if ((cadastro === null) || (CryptoJS.SHA256(senha).toString() !== cadastro.senha)) {
         showToast('error', 'Usuário ou senha incorreta');
     } else {
         localStorage.setItem('activeUser', usuario);
