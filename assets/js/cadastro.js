@@ -22,7 +22,7 @@ cadastroForm.addEventListener('submit', function (event) {
   const dataCadastro = new Date();
   const timestamp = dataCadastro.getTime();
   const cadastro = {
-    senha: senha,
+    senha: CryptoJS.SHA256(senha).toString(),
     dataCadastro: timestamp,
   };
 
