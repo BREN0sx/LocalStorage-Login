@@ -44,8 +44,8 @@ const showToast = (type, message) => {
     toastContainer.removeChild(oldToast);
   }
 
-  setTimeout(() => {
+  /* setTimeout(() => {
     toastContainer.removeChild(toast);
     toasts.splice(toasts.indexOf(toast), 1);
-  }, 4000);
+  }, 4000); */
 };
